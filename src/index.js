@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-const logoImg = document.getElementById('logo-img');
+const enterAppBtn = document.getElementById('enter-app');
 const rootDiv = document.getElementById('root');
 
-if (logoImg) {
-  logoImg.style.cursor = 'pointer';
-  logoImg.onclick = function () {
+if (enterAppBtn) {
+  enterAppBtn.style.cursor = 'pointer';
+  enterAppBtn.onclick = function () {
     // 隐藏网格
     document.getElementById('grid-container').style.display = 'none';
     // 隐藏标题
