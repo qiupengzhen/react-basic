@@ -9,12 +9,20 @@ if (enterAppBtn) {
   enterAppBtn.style.cursor = 'pointer';
   enterAppBtn.onclick = function () {
     // 隐藏网格
-    document.getElementById('grid-container').style.display = 'none';
+    const grid = document.getElementById('grid-container');
+    if (grid) grid.style.display = 'none';
     // 隐藏标题
-    document.querySelector('h1').style.display = 'none';
+    const h1 = document.querySelector('h1');
+    if (h1) h1.style.display = 'none';
+    // 隐藏首页容器（防止多次点击报错）
+    const container = document.querySelector('.container');
+    if (container) container.style.display = 'none';
     // 显示App
-    const root = ReactDOM.createRoot(rootDiv);
-    root.render(<App />);
+    if (rootDiv) {
+      rootDiv.style.display = 'block';
+      const root = ReactDOM.createRoot(rootDiv);
+      root.render(<App />);
+    }
   };
 }
 
