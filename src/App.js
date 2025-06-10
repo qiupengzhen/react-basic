@@ -5,7 +5,8 @@ function App() {
   const [orders, setOrders] = useState([
     { date: '2025-06-07', income: 15.3 },
     { date: '2025-06-08', income: 23.5 },
-    { date: '2025-06-09', income: 10.9 }
+    { date: '2025-06-09', income: 10.9 },
+    { date: '2025-06-08', income: 42.6 }
   ]);
 
   const [newOrderDate, setNewOrderDate] = useState('');
